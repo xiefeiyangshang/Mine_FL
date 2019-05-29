@@ -11,10 +11,12 @@ class AppPage extends StatefulWidget {
 class _MyHomePageState extends State<AppPage>
     with SingleTickerProviderStateMixin {
   SpUtil spUtil;
+  static List tabData=[
+    {'text':'首页','icon':Icon(Icons.extension)}
+  ];
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return null;
   }
 }
