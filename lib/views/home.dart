@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,18 +11,15 @@ class _ScrollHome extends State<HomeScreen>
   @override
   void initState() {
     super.initState();
-    _scrollController = ScrollController(
-        initialScrollOffset: MediaQueryData.fromWindow(window).padding.top);
+    _scrollController = ScrollController(initialScrollOffset: 100.0);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-//        controller: _scrollController,
-          child: Text(
-              '2ksfdjksjfksdjfksljdjsldkfjksdjfksldjfksjdfksdjfkjsdfkljsdfjskfjsdklfjskdjfsldjfsldfjslfsjcsdfjsdkfjsldjfsldkfjskldjfksldjfs'
-            )),
+          controller: _scrollController,
+          child: ),
     );
   }
 }
