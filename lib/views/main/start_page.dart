@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mine_fl/utils/image_utils.dart';
 
 import '../home.dart';
@@ -86,6 +87,11 @@ class _MainPageState extends State<MainPage> {
         unselectedFontSize: 10,
         selectedFontSize: 10,
         onTap: (int index) {
+          Fluttertoast.showToast(
+              msg: '测试->$_currentIndex',
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              backgroundColor: Color.fromARGB(88, 00, 00, 00));
           setState(() {
             _currentIndex = index;
           });
