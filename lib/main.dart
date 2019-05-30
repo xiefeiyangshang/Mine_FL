@@ -5,7 +5,6 @@ import 'resouces/shared_perferences_keys.dart';
 import 'routers/application.dart';
 import 'routers/routers.dart';
 import 'utils/shared_preferences.dart';
-import 'views/main/home.dart';
 import 'views/main/start_page.dart';
 
 SpUtil spUtil;
@@ -21,6 +20,7 @@ class MyApp extends StatefulWidget {
     final router = new Router();
     Routes.configureRoutes(router);
     App.router = router;
+    App.sharepefrence = spUtil;
   }
 
   @override
@@ -47,11 +47,11 @@ class _MyAppState extends State<MyApp> {
   }
 
   showWelcomPage() {
-    bool showWelcome = spUtil.getBool(SharedPreferncesKey.showWelcome);
-    if (showWelcome == null || showWelcome) {
-      return GuildePage();
+    bool guide = spUtil.getBool(SharedPreferncesKey.showGuide);
+    if (guide == null || guide) {
+      return MainPage();
     } else {
-      return AppPage();
+      return MainPage();
     }
   }
 }

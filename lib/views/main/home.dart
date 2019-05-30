@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:mine_fl/utils/shared_preferences.dart';
+import 'package:mine_fl/resouces/shared_perferences_keys.dart';
+import 'package:mine_fl/routers/application.dart';
 
-class AppPage extends StatefulWidget {
+class GuidePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _MyHomePageState();
+    return _GuidePageState();
   }
 }
 
-class _MyHomePageState extends State<AppPage>
+class _GuidePageState extends State<GuidePage>
     with SingleTickerProviderStateMixin {
-  SpUtil spUtil;
-  static List tabData=[
-    {'text':'首页','icon':Icon(Icons.extension)}
-  ];
-
   @override
   Widget build(BuildContext context) {
-    return null;
+    App.sharepefrence.putBool(SharedPreferncesKey.showGuide, true);
+    return Center(
+      child: Text(
+        '引导页',
+        style: TextStyle(fontSize: 50, color: Colors.red),
+      ),
+    );
   }
 }
