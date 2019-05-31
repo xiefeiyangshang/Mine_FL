@@ -8,7 +8,7 @@ import 'utils/shared_preferences.dart';
 import 'views/main/start_page.dart';
 
 SpUtil spUtil;
-const int ThemeColor = 0xFFC91B3A;
+const int ThemeColor = 0xFFF4F4F4;
 
 void main() async {
   spUtil = await SpUtil.getInstance();
