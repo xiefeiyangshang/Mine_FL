@@ -307,7 +307,7 @@ class _ScrollHome extends State<HomeScreen>
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+          padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
           color: Color(0xFFFBFBFB),
           alignment: Alignment.topLeft,
           child: Text(
@@ -406,6 +406,10 @@ class _ScrollHome extends State<HomeScreen>
               ],
             ),
           ),
+          Container(
+            height: 0.5,
+            color: Color(0xFFEAEAEB),
+          )
         ],
       ),
     );
